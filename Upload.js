@@ -12,7 +12,7 @@ function Upload() {
 
   const handleUpload = async () => {
     if (!file || !subject) {
-      setMessage("⚠️ Please select a subject and choose a file.");
+      setMessage("Please select a subject and choose a file.");
       return;
     }
 
@@ -24,7 +24,7 @@ function Upload() {
       const res = await axios.post("http://localhost:8080/api/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      setMessage(`✅ File uploaded successfully: ${res.data.filePath}`);
+      setMessage(` File uploaded successfully: ${res.data.filePath}`);
     } catch (err) {
       console.error(err);
       setMessage("❌ Upload failed. Please try again.");
@@ -66,3 +66,4 @@ function Upload() {
 }
 
 export default Upload;
+
