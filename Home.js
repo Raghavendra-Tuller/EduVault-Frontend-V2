@@ -29,7 +29,7 @@ function Home() {
     <div className="home-container">
       <h2 className="home-title">Uploaded Notes</h2>
 
-      {/* 🔍 Search Bar */}
+      {/* Search Bar */}
       <div className="filter-bar">
         <input
           type="text"
@@ -43,7 +43,7 @@ function Home() {
         </button>
       </div>
 
-      {/* 📘 Subject Cards */}
+      {/* Subject Cards */}
       <div className="notes-grid">
         {filteredSubjects.map((sub, index) => (
           <Link
@@ -62,3 +62,4 @@ function Home() {
 }
 
 export default Home;
+
